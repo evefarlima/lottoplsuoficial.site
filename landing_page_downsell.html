@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Última Oportunidad Celestial - Vida Inteligente</title>
+    <!-- Tailwind CSS para estilização rápida e responsiva -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons para ícones modernos e leves -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts: Inter para base e Playfair Display para títulos elegantes/místicos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,800;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .font-celestial {
+            font-family: 'Playfair Display', serif;
+        }
+        /* Animação suave de pulso dourado místico para o botão principal */
+        @keyframes gold-glow {
+            0%, 100% { 
+                transform: scale(1); 
+                box-shadow: 0 0 20px rgba(245, 158, 11, 0.4), inset 0 0 10px rgba(255, 255, 255, 0.2); 
+            }
+            50% { 
+                transform: scale(1.02); 
+                box-shadow: 0 0 35px rgba(245, 158, 11, 0.8), inset 0 0 20px rgba(255, 255, 255, 0.4); 
+            }
+        }
+        .btn-gold {
+            animation: gold-glow 2.5s infinite ease-in-out;
+        }
+        /* Estrelas piscando de fundo */
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+        .star {
+            animation: twinkle 3s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col justify-between antialiased selection:bg-amber-500 selection:text-slate-950 overflow-x-hidden relative">
+
+    <!-- Efeitos de iluminação mística de fundo (Auroras Cósmicas) -->
+    <div class="absolute top-0 left-1/4 w-[500px] h-[500px] bg-purple-900/20 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+    <div class="absolute top-1/3 right-1/4 w-[600px] h-[600px] bg-indigo-900/15 rounded-full blur-[150px] pointer-events-none -z-10"></div>
+    <div class="absolute bottom-1/4 left-1/3 w-[450px] h-[450px] bg-amber-950/10 rounded-full blur-[100px] pointer-events-none -z-10"></div>
+
+    <!-- BARRA DE PROGRESSO DO FUNIL EM ESTILO MÍSTICO -->
+    <header class="w-full bg-slate-900/60 backdrop-blur-md border-b border-purple-950/40 py-6 sticky top-0 z-30 shadow-2xl">
+        <div class="max-w-xl mx-auto px-4">
+            <!-- Indicador numérico de etapas celestiais -->
+            <div class="flex items-center justify-between relative mb-4">
+                <!-- Linha de progresso escura ao fundo -->
+                <div class="absolute left-0 right-0 top-1/2 h-0.5 bg-slate-800 -translate-y-1/2 z-0 rounded-full"></div>
+                <!-- Linha de progresso dourada ativa -->
+                <div class="absolute left-0 w-2/3 top-1/2 h-0.5 bg-gradient-to-r from-purple-600 via-pink-500 to-amber-500 -translate-y-1/2 z-0 rounded-full transition-all duration-1000"></div>
+
+                <!-- Etapa 1: Ativa/Concluída -->
+                <div class="relative z-10 flex flex-col items-center">
+                    <div class="w-9 h-9 rounded-full bg-purple-900 text-amber-400 border border-amber-500/50 flex items-center justify-center font-bold text-xs shadow-lg">
+                        <i data-lucide="check" class="w-4 h-4"></i>
+                    </div>
+                </div>
+
+                <!-- Etapa 2: Ativa/Concluída -->
+                <div class="relative z-10 flex flex-col items-center">
+                    <div class="w-9 h-9 rounded-full bg-purple-900 text-amber-400 border border-amber-500/50 flex items-center justify-center font-bold text-xs shadow-lg">
+                        <i data-lucide="check" class="w-4 h-4"></i>
+                    </div>
+                </div>
+
+                <!-- Etapa 3: Em Progresso (Animação mística dourada) -->
+                <div class="relative z-10 flex flex-col items-center">
+                    <div class="w-11 h-11 rounded-full bg-gradient-to-br from-amber-400 via-yellow-500 to-amber-600 text-slate-950 flex items-center justify-center font-extrabold text-sm shadow-[0_0_20px_rgba(245,158,11,0.6)] ring-4 ring-amber-500/20 animate-pulse">
+                        <span class="text-base font-bold">3</span>
+                    </div>
+                </div>
+
+                <!-- Etapa 4: Futura -->
+                <div class="relative z-10 flex flex-col items-center">
+                    <div class="w-9 h-9 rounded-full bg-slate-900 text-slate-600 border border-slate-800 flex items-center justify-center font-bold text-xs">
+                        <span>4</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Texto informativo de status cósmico -->
+            <div class="text-center">
+                <span class="inline-block bg-purple-950/60 text-amber-400 text-[10px] tracking-widest px-3 py-1 rounded-full font-bold border border-amber-500/30 uppercase">
+                    Paso 2 de 4 completado – Sintonizando frecuencia de abundancia
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL (LANDING PAGE DE DOWNSELL) -->
+    <main class="flex-grow max-w-3xl mx-auto px-4 py-8 md:py-12 relative">
+        
+        <!-- CARD PRINCIPAL DE VENDAS MÍSTICO -->
+        <div class="bg-slate-900/60 backdrop-blur-lg rounded-3xl shadow-2xl border border-purple-900/30 overflow-hidden p-6 md:p-10 space-y-8 relative">
+            
+            <!-- Brilhos internos e detalhes decorativos místico -->
+            <div class="absolute top-0 right-0 p-4 opacity-20 star">
+                <i data-lucide="sparkles" class="w-10 h-10 text-amber-400"></i>
+            </div>
+            <div class="absolute bottom-1/4 left-4 opacity-10 star" style="animation-delay: 1.5s;">
+                <i data-lucide="moon" class="w-8 h-8 text-indigo-400"></i>
+            </div>
+
+            <!-- HEADLINE IMPACTANTE -->
+            <div class="text-center space-y-4">
+                <span class="text-amber-400 font-extrabold tracking-widest text-xs uppercase block flex items-center justify-center gap-1.5">
+                    <i data-lucide="sparkles" class="w-3.5 h-3.5 animate-spin" style="animation-duration: 6s;"></i>
+                    Mensaje importante del Universo
+                </span>
+                <h1 class="text-2xl md:text-4xl font-black text-white leading-tight font-celestial">
+                    No salgas de esta página... Tu vibración te ha guiado <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-600 underline decoration-amber-500/40">exactamente aquí</span>.
+                </h1>
+                <p class="text-base md:text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto font-light">
+                    Hay una razón energética por la que no completaste el paso anterior. Tu subconsciente está luchando contra viejas barreras de escasez. Hoy es el momento de romper ese bloqueo y <strong class="text-amber-300 font-semibold">reprogramar tu frecuencia magnética</strong> de una vez por todas.
+                </p>
+            </div>
+
+            <!-- EMBLEMA DO INTERCÂMBIO DE ENERGIA -->
+            <div class="bg-gradient-to-r from-purple-950/40 via-amber-950/20 to-purple-950/40 border border-amber-500/20 rounded-2xl p-5 text-center flex flex-col md:flex-row items-center justify-center gap-4 shadow-xl">
+                <div class="bg-gradient-to-br from-amber-400 to-amber-600 text-slate-950 p-3.5 rounded-full flex items-center justify-center shadow-[0_0_15px_rgba(245,158,11,0.5)]">
+                    <i data-lucide="magnet" class="w-6 h-6"></i>
+                </div>
+                <div class="text-left">
+                    <h3 class="font-bold text-amber-200 text-lg font-celestial">Intercambio de Energía Reducido</h3>
+                    <p class="text-sm text-slate-300">Puedes desbloquear el portal de abundancia por un único aporte simbólico de <strong class="text-amber-400 font-black underline text-base">$17 dólares</strong>.</p>
+                </div>
+            </div>
+
+            <!-- NOVO ELEMENTO INTERATIVO: TESTE DE ALINHAMENTO VIBRACIONAL -->
+            <div class="bg-slate-950/80 rounded-2xl p-5 border border-purple-950/60 space-y-4">
+                <div class="flex items-center gap-2 pb-2 border-b border-purple-950/40">
+                    <i data-lucide="activity" class="text-purple-400 w-5 h-5"></i>
+                    <h3 class="font-bold text-slate-200 text-sm tracking-wider uppercase">Auto-Diagnóstico: Evalúa tu Vibración de Dinero</h3>
+                </div>
+                
+                <div id="quiz-container" class="space-y-4">
+                    <p class="text-xs text-slate-400">Responde esta pregunta rápida para calibrar tu estado energético actual:</p>
+                    <div class="space-y-2" id="quiz-options">
+                        <button onclick="answerQuiz(1)" class="w-full text-left p-3 rounded-xl bg-slate-900 border border-slate-800 hover:border-purple-500/50 hover:bg-purple-950/20 transition-all text-xs flex items-center justify-between group">
+                            <span>Siento que por más que trabajo duro, el dinero se me escapa como agua de las manos.</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4 text-slate-600 group-hover:text-amber-400 transition-colors"></i>
+                        </button>
+                        <button onclick="answerQuiz(2)" class="w-full text-left p-3 rounded-xl bg-slate-900 border border-slate-800 hover:border-purple-500/50 hover:bg-purple-950/20 transition-all text-xs flex items-center justify-between group">
+                            <span>Tengo miedo constante de perder la estabilidad financiera o quedar en la ruina.</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4 text-slate-600 group-hover:text-amber-400 transition-colors"></i>
+                        </button>
+                        <button onclick="answerQuiz(3)" class="w-full text-left p-3 rounded-xl bg-slate-900 border border-slate-800 hover:border-purple-500/50 hover:bg-purple-950/20 transition-all text-xs flex items-center justify-between group">
+                            <span>Creo en la Ley de Atracción, pero parece que para mí nunca funciona.</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4 text-slate-600 group-hover:text-amber-400 transition-colors"></i>
+                        </button>
+                    </div>
+                    <div id="quiz-result" class="hidden p-4 rounded-xl bg-purple-950/30 border border-purple-500/30 text-xs space-y-2 animate-fadeIn">
+                        <div class="flex items-center gap-2 text-amber-400 font-bold">
+                            <i data-lucide="alert-circle" class="w-4 h-4"></i>
+                            <span>Frecuencia Detectada: Bloqueo de Resistencia</span>
+                        </div>
+                        <p class="text-slate-300 leading-relaxed">
+                            Tu energía actual está sintonizada en "Modo Alerta/Falta". Cuando vibras bajo esta frecuencia, cualquier intento de atraer prosperidad es repelido por tu subconsciente. <strong>El Audio de Prosperidad Acelerada y las 3 Técnicas de este paquete están diseñados exactamente para disolver este nudo vibracional hoy mismo.</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NOVO ELEMENTO INTERATIVO: PLAYER DE FREQUÊNCIA DE SINAL SAGRADO -->
+            <div class="bg-gradient-to-b from-purple-950/40 to-slate-950 border border-purple-900/40 rounded-2xl p-5 space-y-4">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="music" class="text-amber-400 w-5 h-5"></i>
+                        <h3 class="font-bold text-white text-sm">Prueba del Audio de Prosperidad Acelerada</h3>
+                    </div>
+                    <span class="text-[10px] bg-amber-500/10 text-amber-400 px-2 py-0.5 rounded border border-amber-500/20 uppercase tracking-widest font-bold">Frecuencia 528Hz</span>
+                </div>
+                
+                <p class="text-xs text-slate-300">
+                    Siente el poder magnético de la resonancia sagrada de manifestación. Haz clic para reproducir un fragmento de prueba de la vibración de reprogramación:
+                </p>
+
+                <!-- Audio Player Widget -->
+                <div class="bg-slate-900 rounded-xl p-4 flex items-center justify-between gap-4 border border-purple-950">
+                    <button id="playBtn" onclick="toggleCelestialSound()" class="w-12 h-12 bg-amber-500 hover:bg-amber-600 text-slate-950 rounded-full flex items-center justify-center transition-all shadow-[0_0_12px_rgba(245,158,11,0.4)] active:scale-95">
+                        <i data-lucide="play" id="playIcon" class="w-5 h-5 ml-1"></i>
+                    </button>
+                    <div class="flex-grow space-y-1">
+                        <p class="text-xs font-semibold text-slate-200">Binaural Prosperity Resonance</p>
+                        <!-- Visualizador de ondas animado (controlado por JS) -->
+                        <div class="flex items-end gap-1 h-6" id="waveContainer">
+                            <span class="w-1 bg-slate-700 h-1 transition-all rounded-full"></span>
+                            <span class="w-1 bg-slate-700 h-2 transition-all rounded-full"></span>
+                            <span class="w-1 bg-slate-700 h-1 transition-all rounded-full"></span>
+                            <span class="w-1 bg-slate-700 h-3 transition-all rounded-full"></span>
+                            <span class="w-1 bg-slate-700 h-1 transition-all rounded-full"></span>
+                            <span class="w-1 bg-slate-700 h-2 transition-all rounded-full"></span>
+                            <span class="w-1 bg-slate-700 h-1 transition-all rounded-full"></span>
+                            <span class="w-1 bg-slate-700 h-4 transition-all rounded-full"></span>
+                            <span class="w-1 bg-slate-700 h-1 transition-all rounded-full"></span>
+                            <span class="w-1 bg-slate-700 h-3 transition-all rounded-full"></span>
+                            <span class="w-1 bg-slate-700 h-1 transition-all rounded-full"></span>
+                            <span class="w-1 bg-slate-700 h-2 transition-all rounded-full"></span>
+                        </div>
+                    </div>
+                    <span id="playerTimer" class="text-xs font-mono text-slate-500">0:00 / 0:15</span>
+                </div>
+            </div>
+
+            <!-- LISTA DE ENTREGÁVEIS (CARDS DE VALOR ACUMULADO) -->
+            <div class="space-y-4">
+                <div class="flex items-center gap-2 pb-2 border-b border-purple-950/40">
+                    <i data-lucide="stars" class="text-amber-400 w-5 h-5"></i>
+                    <h2 class="font-bold text-slate-100 text-lg font-celestial">Lo que activarás de inmediato en tu vida:</h2>
+                </div>
+
+                <!-- Item 1 -->
+                <div class="group flex gap-4 p-4 rounded-xl border border-purple-950/30 bg-purple-950/5 hover:border-amber-500/30 hover:bg-purple-950/10 transition-all duration-300">
+                    <div class="flex-shrink-0">
+                        <span class="flex items-center justify-center w-8 h-8 rounded-full bg-amber-500/10 text-amber-400 group-hover:scale-110 transition-transform">
+                            <i data-lucide="sparkles" class="w-4 h-4"></i>
+                        </span>
+                    </div>
+                    <div>
+                        <p class="text-slate-300 leading-relaxed font-light text-sm">
+                            <strong class="text-white font-bold">3 técnicas secretas de visualización creativa</strong> que abren tu campo vibracional para atraer sincronicidades de abundancia en tiempo récord.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="group flex gap-4 p-4 rounded-xl border border-purple-950/30 bg-purple-950/5 hover:border-amber-500/30 hover:bg-purple-950/10 transition-all duration-300">
+                    <div class="flex-shrink-0">
+                        <span class="flex items-center justify-center w-8 h-8 rounded-full bg-amber-500/10 text-amber-400 group-hover:scale-110 transition-transform">
+                            <i data-lucide="shield-alert" class="w-4 h-4"></i>
+                        </span>
+                    </div>
+                    <div>
+                        <p class="text-slate-300 leading-relaxed font-light text-sm">
+                            El método exacto para identificar y <strong class="text-white font-bold">borrar de tu mente celular tus 5 mayores creencias limitantes</strong> respecto al dinero, sintonizando la riqueza de manera natural.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="group flex gap-4 p-4 rounded-xl border border-purple-950/30 bg-purple-950/5 hover:border-amber-500/30 hover:bg-purple-950/10 transition-all duration-300">
+                    <div class="flex-shrink-0">
+                        <span class="flex items-center justify-center w-8 h-8 rounded-full bg-amber-500/10 text-amber-400 group-hover:scale-110 transition-transform">
+                            <i data-lucide="gem" class="w-4 h-4"></i>
+                        </span>
+                    </div>
+                    <div>
+                        <p class="text-slate-300 leading-relaxed font-light text-sm">
+                            <strong class="text-white font-bold">El protocolo de gratitud cuántica:</strong> un potente ejercicio de alta frecuencia de solo 5 minutos que alinea tu campo electromagnético con el flujo divino de prosperidad.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="group flex gap-4 p-4 rounded-xl border border-purple-950/30 bg-purple-950/5 hover:border-amber-500/30 hover:bg-purple-950/10 transition-all duration-300">
+                    <div class="flex-shrink-0">
+                        <span class="flex items-center justify-center w-8 h-8 rounded-full bg-amber-500/10 text-amber-400 group-hover:scale-110 transition-transform">
+                            <i data-lucide="eye" class="w-4 h-4"></i>
+                        </span>
+                    </div>
+                    <div>
+                        <p class="text-slate-300 leading-relaxed font-light text-sm">
+                            <strong class="text-white font-bold">Secreto cuántico de contención:</strong> Cómo elevar tu "vasija energética" para retener y proteger la abundancia que atraes, evitando auto-sabotajes financieros.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="group flex gap-4 p-4 rounded-xl border border-purple-950/30 bg-purple-950/5 hover:border-amber-500/30 hover:bg-purple-950/10 transition-all duration-300">
+                    <div class="flex-shrink-0">
+                        <span class="flex items-center justify-center w-8 h-8 rounded-full bg-amber-500/10 text-amber-400 group-hover:scale-110 transition-transform">
+                            <i data-lucide="waveform" class="w-4 h-4"></i>
+                        </span>
+                    </div>
+                    <div>
+                        <p class="text-slate-300 leading-relaxed font-light text-sm">
+                            <strong class="text-white font-bold">El audio sublime de abundancia reprogramadora:</strong> una pista binaural con tecnología de ondas que penetra directamente en tu subconsciente mientras duermes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CRONÔMETRO DE URGÊNCIA CELESTIAL -->
+            <div class="bg-gradient-to-r from-purple-950 via-slate-900 to-indigo-950 border border-purple-900/30 text-white rounded-2xl p-4 flex flex-col md:flex-row items-center justify-between gap-4">
+                <div class="flex items-center gap-2">
+                    <i data-lucide="hourglass" class="text-amber-400 w-5 h-5 animate-pulse"></i>
+                    <span class="text-xs font-semibold text-slate-300 tracking-wider uppercase">Este alineamiento energético cierra pronto:</span>
+                </div>
+                <div class="flex gap-2 text-center">
+                    <div class="bg-slate-950 px-3 py-1.5 rounded-lg min-w-[55px] border border-purple-900/30">
+                        <span id="minutos" class="block font-mono text-xl font-bold text-amber-400">10</span>
+                        <span class="text-[9px] uppercase tracking-wider text-slate-500 font-bold">Min</span>
+                    </div>
+                    <span class="text-xl font-bold text-amber-400 self-center animate-ping">:</span>
+                    <div class="bg-slate-950 px-3 py-1.5 rounded-lg min-w-[55px] border border-purple-900/30">
+                        <span id="segundos" class="block font-mono text-xl font-bold text-amber-400">00</span>
+                        <span class="text-[9px] uppercase tracking-wider text-slate-500 font-bold">Seg</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SEÇÃO DE GARANTIA E SEGURANÇA CELESTIAL -->
+            <div class="border-t border-purple-950/40 pt-6 flex flex-col md:flex-row items-center gap-6 justify-between text-center md:text-left">
+                <div class="flex items-center gap-3">
+                    <div class="bg-amber-500/10 text-amber-400 p-2.5 rounded-full border border-amber-500/20">
+                        <i data-lucide="sun" class="w-6 h-6 animate-spin" style="animation-duration: 20s;"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white text-sm font-celestial">Garantía Incondicional del Universo (7 Días)</h4>
+                        <p class="text-xs text-slate-400 font-light">Prueba todo el material, si no sientes que tu vibración se eleva, te reintegramos el 100%.</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-1.5 bg-purple-950/20 px-3 py-1.5 rounded-lg border border-purple-500/20">
+                    <i data-lucide="shield-check" class="w-4 h-4 text-amber-400"></i>
+                    <span class="text-[10px] font-bold tracking-widest text-amber-200 uppercase">Transferencia Energética Segura</span>
+                </div>
+            </div>
+
+            <!-- SEÇÃO FINAL DE CTA -->
+            <div class="text-center space-y-6 pt-4 border-t border-purple-950/40">
+                <div class="space-y-1">
+                    <p class="text-amber-400 font-extrabold text-xs flex items-center justify-center gap-1.5 tracking-wider uppercase">
+                        <i data-lucide="alert-triangle" class="w-4 h-4 text-red-500"></i>
+                        Esta alineación energética no se repetirá jamás.
+                    </p>
+                    <p class="text-slate-400 text-sm font-light">Toma la decisión y deja que el Universo fluya a tu favor.</p>
+                </div>
+
+                <!-- Call to Action Container -->
+                <div class="space-y-4 max-w-md mx-auto">
+                    <p class="text-slate-200 font-bold text-sm flex items-center justify-center gap-2">
+                        <i data-lucide="help-circle" class="w-4 h-4 text-amber-400 animate-bounce"></i>
+                        Haz clic abajo para reclamar tu frequency de abundancia:
+                    </p>
+                    
+                    <!-- Botão Principal com Pulso Dourado Cósmico -->
+                    <button onclick="handlePurchase()" class="btn-gold w-full bg-gradient-to-r from-amber-400 via-yellow-500 to-amber-600 hover:from-amber-500 hover:to-amber-700 active:translate-y-0.5 text-slate-950 font-black text-lg py-5 px-8 rounded-2xl shadow-xl transition-all duration-200 flex items-center justify-center gap-3 group">
+                        <span class="uppercase tracking-wide">Quiero Abrir mi Portal de Abundancia</span>
+                        <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                    </button>
+                    
+                    <!-- Preço de Apoio Vibracional -->
+                    <p class="text-[10px] font-bold text-slate-500 tracking-widest uppercase">
+                        Solo por un intercambio de <span class="text-amber-400 font-extrabold">$17 dólares</span> (Aporte Único)
+                    </p>
+
+                    <!-- Link de Declínio Interativo direcionado diretamente para a saída -->
+                    <button onclick="confirmExit()" class="text-slate-500 hover:text-red-400 text-xs underline font-semibold transition-colors mt-2 block mx-auto py-2 uppercase tracking-widest">
+                        Rechazar abundancia y salir
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER COM MARCAS E POLÍTICAS -->
+    <footer class="w-full bg-slate-950 text-slate-500 py-12 border-t border-purple-950/30 text-center text-xs space-y-4 relative">
+        <div class="max-w-xl mx-auto px-4 space-y-4">
+            <p class="font-bold text-slate-400 font-celestial">Vida Inteligente © 2026. Todos los derechos reservados.</p>
+            <p class="leading-relaxed font-light text-[11px]">
+                Este sitio no forma parte de Google Inc. o Facebook Inc. Tampoco está respaldado por estas corporaciones de ninguna manera. Los resultados en la manifestación y leyes físicas varían de acuerdo a tu alineación mental y de acción.
+            </p>
+            <div class="flex justify-center gap-4 text-[10px] uppercase tracking-wider">
+                <a href="#" class="hover:text-amber-400 transition-colors">Términos de Servicio</a>
+                <span>•</span>
+                <a href="#" class="hover:text-amber-400 transition-colors">Políticas de Privacidad</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- NOTIFICAÇÃO FLUTUANTE DE PROVA SOCIAL MÍSTICA -->
+    <div id="socialProof" class="fixed bottom-4 left-4 z-40 bg-slate-900/90 backdrop-blur-md rounded-2xl shadow-2xl border border-purple-900/30 p-4 max-w-xs flex items-center gap-3 transform translate-y-24 opacity-0 transition-all duration-500">
+        <div class="bg-amber-500/10 text-amber-400 p-2 rounded-full flex-shrink-0 border border-amber-500/20">
+            <i data-lucide="sparkles" class="w-5 h-5"></i>
+        </div>
+        <div>
+            <p class="text-xs font-bold text-slate-200" id="notificationText">Alejandro G. acaba de alinearse</p>
+            <p class="text-[10px] text-slate-400 font-light">Atrajo abundancia hace 3 min en Bogotá</p>
+        </div>
+    </div>
+
+    <!-- SCRIPT DE INTERATIVIDADE -->
+    <script>
+        // Inicializa os ícones do Lucide
+        lucide.createIcons();
+
+        // Cronômetro regressivo de 10 minutos (Urência ativa)
+        let totalSegundos = 10 * 60;
+        const minutosEl = document.getElementById('minutos');
+        const segundosEl = document.getElementById('segundos');
+
+        const countdown = setInterval(() => {
+            let minutos = Math.floor(totalSegundos / 60);
+            let segundos = totalSegundos % 60;
+
+            minutosEl.textContent = minutos < 10 ? '0' + minutos : minutos;
+            segundosEl.textContent = segundos < 10 ? '0' + segundos : segundos;
+
+            if (totalSegundos <= 0) {
+                totalSegundos = 10 * 60;
+            } else {
+                totalSegundos--;
+            }
+        }, 1000);
+
+        // Notificações de Prova Social Cósmica Dinâmicas
+        const nomes = ["Elena M.", "Mateo D.", "Aura S.", "Lucas V.", "Sofía G.", "Ignacio R.", "Gabriela S.", "Ismael L."];
+        const cidades = ["Bogotá", "Ciudad de México", "Madrid", "Lima", "Santiago", "Buenos Aires", "Quito", "Medellín"];
+        const socialProofEl = document.getElementById('socialProof');
+        const notificationTextEl = document.getElementById('notificationText');
+
+        function triggerNotification() {
+            const randomNome = nomes[Math.floor(Math.random() * nomes.length)];
+            const randomCidade = cidades[Math.floor(Math.random() * cidades.length)];
+            
+            notificationTextEl.innerHTML = `<span class="font-bold text-amber-400">${randomNome}</span> acaba de sintonizar el flujo`;
+            socialProofEl.querySelector('p:last-child').textContent = `Manifestó su abundancia desde ${randomCidade}`;
+
+            socialProofEl.classList.remove('translate-y-24', 'opacity-0');
+            setTimeout(() => {
+                socialProofEl.classList.add('translate-y-24', 'opacity-0');
+            }, 5000);
+        }
+
+        setInterval(triggerNotification, Math.random() * (25000 - 15000) + 15000);
+        setTimeout(triggerNotification, 3000);
+
+        // Fluxo de Compra Simulada
+        function handlePurchase() {
+            // Desligar áudio antes de redirecionar se estiver tocando
+            if (audioContext) {
+                stopCelestialSound();
+            }
+            window.location.href = "https://checkout.vidainteligente.site/lottods02-downsell";
+        }
+
+        function confirmExit() {
+            if (audioContext) {
+                stopCelestialSound();
+            }
+            window.location.href = "https://vidainteligente.com/salida";
+        }
+
+        // Lógica do Diagnóstico Rápido
+        function answerQuiz(option) {
+            document.getElementById('quiz-options').classList.add('hidden');
+            document.getElementById('quiz-result').classList.remove('hidden');
+        }
+
+        // SÍNTESE DE ÁUDIO REAL DE FREQUÊNCIA 528HZ (WEB AUDIO API)
+        let audioContext = null;
+        let oscillator = null;
+        let gainNode = null;
+        let playInterval = null;
+        let isPlaying = false;
+        let currentSeconds = 0;
+
+        const playBtn = document.getElementById('playBtn');
+        const playIcon = document.getElementById('playIcon');
+        const timerEl = document.getElementById('playerTimer');
+        const waveBars = document.getElementById('waveContainer').children;
+
+        function toggleCelestialSound() {
+            if (isPlaying) {
+                stopCelestialSound();
+            } else {
+                startCelestialSound();
+            }
+        }
+
+        function startCelestialSound() {
+            try {
+                // Instanciar o áudio Context se não existir
+                audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                
+                // Criar oscilador para a Frequência Sagrada 528Hz (Solfeggio Manifestação)
+                oscillator = audioContext.createOscillator();
+                oscillator.type = 'sine'; // Som de meditação puro
+                oscillator.frequency.setValueAtTime(528, audioContext.currentTime);
+
+                // Criar filtro de baixa frequência para som binaural aconchegante
+                const filter = audioContext.createBiquadFilter();
+                filter.type = 'lowpass';
+                filter.frequency.setValueAtTime(600, audioContext.currentTime);
+
+                // Controle de Volume para não machucar os ouvidos
+                gainNode = audioContext.createGain();
+                gainNode.gain.setValueAtTime(0.001, audioContext.currentTime); // fade-in inicial suave
+                gainNode.gain.exponentialRampToValueAtTime(0.12, audioContext.currentTime + 1.5); // volume seguro em 12%
+
+                // Conectar
+                oscillator.connect(filter);
+                filter.connect(gainNode);
+                gainNode.connect(audioContext.destination);
+
+                // Tocar som
+                oscillator.start();
+                isPlaying = true;
+                
+                // Mudar ícone do player
+                playIcon.setAttribute('data-lucide', 'square');
+                lucide.createIcons();
+
+                // Iniciar contador e animação de ondas sonoras
+                currentSeconds = 0;
+                playInterval = setInterval(() => {
+                    currentSeconds++;
+                    timerEl.textContent = `0:${currentSeconds < 10 ? '0' + currentSeconds : currentSeconds} / 0:15`;
+                    
+                    // Animar as barras
+                    for (let bar of waveBars) {
+                        const randomHeight = Math.floor(Math.random() * 20) + 4;
+                        bar.style.height = `${randomHeight}px`;
+                        bar.style.backgroundColor = '#fbbf24'; // Brilho de energia dourada ativo
+                    }
+
+                    if (currentSeconds >= 15) {
+                        stopCelestialSound();
+                    }
+                }, 1000);
+
+            } catch (err) {
+                console.warn("Navegador bloqueou ou não suporta áudio nativo.", err);
+            }
+        }
+
+        function stopCelestialSound() {
+            if (!isPlaying) return;
+
+            // Fade-out suave do áudio
+            if (gainNode && audioContext) {
+                gainNode.gain.setValueAtTime(gainNode.gain.value, audioContext.currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + 0.5);
+            }
+
+            setTimeout(() => {
+                try {
+                    if (oscillator) oscillator.stop();
+                } catch(e) {}
+                isPlaying = false;
+                
+                // Resetar estados visuais
+                playIcon.setAttribute('data-lucide', 'play');
+                lucide.createIcons();
+                clearInterval(playInterval);
+                timerEl.textContent = "0:00 / 0:15";
+
+                for (let bar of waveBars) {
+                    bar.style.height = '4px';
+                    bar.style.backgroundColor = '#334155';
+                }
+            }, 500);
+        }
+    </script>
+</body>
+</html>
